@@ -5,7 +5,6 @@
 | http://www.php-fusion.co.uk/
 +--------------------------------------------------------+
 | Filename: fusionstats_panel.php
-| CVS Version: 1.00
 | Author: pattyland
 +--------------------------------------------------------+
 | This program is released as free software under the
@@ -25,6 +24,7 @@ echo "<!-- FusionStats -->";
 echo '<!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
+  _paq.push(["appendToTrackingUrl", "bots=1"]);
   _paq.push(["trackPageView"]);
   _paq.push(["enableLinkTracking"]);
   (function() {
@@ -35,7 +35,7 @@ echo '<!-- Piwik -->
     g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="'.$inf_settings['url'].'/piwik.php?idsite='.$inf_settings['site_id'].'" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="'.$inf_settings['url'].'/piwik.php?idsite='.$inf_settings['site_id'].'&rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->';
 
 
