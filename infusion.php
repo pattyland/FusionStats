@@ -25,7 +25,7 @@ if (file_exists(INFUSIONS."fusionstats_panel/locale/".$settings['locale'].".php"
 
 $inf_title = $locale['fs_title'];
 $inf_description = $locale['fs_desc'];
-$inf_version = "0.1";
+$inf_version = "1.1";
 $inf_developer = "pattyland";
 $inf_email = "mail@pattyland.de";
 $inf_weburl = "http://pattyland.de";
