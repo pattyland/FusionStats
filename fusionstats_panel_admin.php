@@ -64,11 +64,11 @@ opentable($locale['fs_title']);
     <label for="ps_site_id">Piwik URL</label>
     <input type="number" class="form-control" id="ps_url" placeholder="1" min="1" max="1000" value="<?php echo $inf_settings['site_id']; ?>" name="fs_site_id">
   </div>
-  <div class="checkbox">
+  <!--<div class="checkbox">
     <label>
       <input type="checkbox" <?php echo ($inf_settings['admin_tracking'] == 1 ? "checked" : ""); ?> value="1" name="fs_admin_tracking"> Track admins too
     </label>
-  </div>
+  </div>-->
   <input type="submit" class="btn btn-default">
 </form>
 <hr>
