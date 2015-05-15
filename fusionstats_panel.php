@@ -17,7 +17,8 @@
 +--------------------------------------------------------*/
 if (!defined("IN_FUSION")) { die("Access Denied"); }
 
-if (iGUEST) include INCLUDES."infusions_include.php";
+if (iGUEST) 
+include_once INCLUDES."infusions_include.php";
 $inf_settings = get_settings("fusionstats_panel");
 
 echo "<!-- FusionStats -->";
