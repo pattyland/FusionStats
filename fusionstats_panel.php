@@ -17,27 +17,26 @@
 +--------------------------------------------------------*/
 if (!defined("IN_FUSION")) { die("Access Denied"); }
 
-if (iGUEST) 
-include_once INCLUDES."infusions_include.php";
-$inf_settings = get_settings("fusionstats_panel");
-
-echo "<!-- FusionStats -->";
-echo '<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["appendToTrackingUrl", "bots=1"]);
-  _paq.push(["trackPageView"]);
-  _paq.push(["enableLinkTracking"]);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://'.preg_replace("(^https?://)", "", $inf_settings['url']).'/";
-    _paq.push(["setTrackerUrl", u+"piwik.php"]);
-    _paq.push(["setSiteId", '.$inf_settings['site_id'].']);
-    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="'.$inf_settings['url'].'/piwik.php?idsite='.$inf_settings['site_id'].'&rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->';
-
-
+if ((iGUEST || iMEMBER) && (!iADMIN && !iSUPERADMIN)) {
+  include_once INCLUDES."infusions_include.php";
+  $inf_settings = get_settings("fusionstats_panel");
+  
+  echo "<!-- FusionStats -->";
+  echo '<!-- Piwik -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["appendToTrackingUrl", "bots=1"]);
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function() {
+      var u=(("https:" == document.location.protocol) ? "https" : "http") + "://'.preg_replace("(^https?://)", "", $inf_settings['url']).'/";
+      _paq.push(["setTrackerUrl", u+"piwik.php"]);
+      _paq.push(["setSiteId", '.$inf_settings['site_id'].']);
+      var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+      g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="'.$inf_settings['url'].'/piwik.php?idsite='.$inf_settings['site_id'].'&rec=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Piwik Code -->';
+}
 ?>
