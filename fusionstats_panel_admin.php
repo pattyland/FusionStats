@@ -72,7 +72,7 @@ opentable($locale['fs_title']);
   <input type="submit" class="btn btn-default">
 </form>
 <hr>
-<p><a href="http://piwik.org" target="_blank">Piwik Homepage</a> - Infusion on GitHub</p>
+<p><a href="http://piwik.org" target="_blank">Piwik Homepage</a> - <a href="https://soerenmueller.com/portfolio/fusionstats/" target="_blank">FusionStats Homepage</a></p>
 
 <?php
 closetable();
@@ -89,7 +89,7 @@ function check_piwik_url($url) {
 	if (!$piwikcheck) return false;
 
 	if (strpos($piwikcheck,'https://github.com/piwik/piwik/blob/master/js/piwik.js') !== false) {
-    		return true;
+    	return true;
 	} else {
 		return false;
 	}
