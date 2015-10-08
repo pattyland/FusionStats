@@ -88,8 +88,8 @@ function check_piwik_url($url) {
 
 	if (!$piwikcheck) return false;
 
-	if (strpos($piwikcheck,'Piwik - Web Analytics') !== false) {
-    	return true;
+	if (strpos($piwikcheck,'https://github.com/piwik/piwik/blob/master/js/piwik.js') !== false) {
+    		return true;
 	} else {
 		return false;
 	}
