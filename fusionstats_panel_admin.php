@@ -61,7 +61,7 @@ opentable($locale['fs_title']);
     <input type="url" class="form-control" id="ps_url" placeholder="http://piwik.example.org" size="50" maxlength="200" value="<?php echo $inf_settings['url']; ?>" name="fs_url">
   </div>
   <div class="form-group">
-    <label for="ps_site_id">Piwik URL</label>
+    <label for="ps_site_id">Piwik Site ID</label>
     <input type="number" class="form-control" id="ps_url" placeholder="1" min="1" max="1000" value="<?php echo $inf_settings['site_id']; ?>" name="fs_site_id">
   </div>
   <!--<div class="checkbox">
